@@ -44,6 +44,14 @@
     <link href="https://hachyderm.io/@" rel="me">
     <link href="https://twitter.com/" rel="me">
     <link href="https://github.com/" rel="me">
+    
+    <script>
+  // Redirect to disclaimer if not yet accepted
+  if (!localStorage.getItem('disclaimerAccepted')) {
+    window.location.href = 'disclaimer.html';
+  }
+</script>
+    
   </head>
 
   <body class="">

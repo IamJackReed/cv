@@ -18,15 +18,26 @@
   filter: grayscale(100%) brightness(90%);
 }
 
+@media (max-width: 600px) {
+  .main-nav.offset-right {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+}
+
 /* Hover effect: pops + colour shift */
 .social-icon:hover {
   transform: scale(1.2) translateY(-1px);
   filter: grayscale(0%) brightness(100%);
 }
 
-/* Ensure .main-nav.offset-right is consistent across screen sizes */
 .main-nav.offset-right {
-  margin-right: 150px !important;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem; /* space between About and icons */
+  padding: 1rem;
 }
 
 /* Always show exploding nav */

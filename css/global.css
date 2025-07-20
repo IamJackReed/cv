@@ -47,3 +47,33 @@
   margin-top: 0 !important;
   z-index: 1000;
 }
+
+.hero-block {
+  position: relative;
+  overflow: hidden;
+  background: #ffe742;
+}
+
+.hero-bg-layer {
+  position: absolute;
+  inset: 0;
+  background: url('https://www.transparenttextures.com/patterns/black-linen.png') repeat;
+  background-size: auto;
+  opacity: 0.25;
+  animation: scroll-bg 60s linear infinite;
+  z-index: 0;
+}
+
+@keyframes scroll-bg {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.hero {
+  position: relative;
+  z-index: 1;
+}

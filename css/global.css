@@ -51,7 +51,7 @@
 .hero-block {
   position: relative;
   overflow: hidden;
-  background: #ffe742;
+  background: #171321;
 }
 
 .hero-bg-layer {
@@ -78,54 +78,80 @@
   z-index: 1;
 }
 
-/* === CUSTOM FIXES & ADDITIONS === */
-/* Flex container for icons */
-.social-icons {
-  display: flex;
-  align-items: baseline;
-  gap: 0.5rem;
-  margin-left: 1rem;
+/* Layout Fixes */
+header {
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-/* Icon style */
-.social-icon {
-  height: 1.25rem;
-  display: inline-block;
-  transition: transform 0.2s ease, filter 0.2s ease;
-  filter: grayscale(100%) brightness(90%);
+.home-link {
+  flex: 1;
+  margin: 0.75rem 0;
+  text-align: left;
 }
 
-/* Hover effect: pops + colour shift */
-.social-icon:hover {
-  transform: scale(1.2) translateY(-1px);
-  filter: grayscale(0%) brightness(100%);
-}
-
-/* Ensure .main-nav.offset-right is consistent across screen sizes */
 .main-nav.offset-right {
-  margin-right: 150px !important;
-}
-
-/* Always show exploding nav */
-.exploding-nav {
-  display: block !important;
-}
-
-.exploding-nav-button {
-  display: block !important;
-}
-
-/* Fix site settings to bottom-right */
-.site-settings {
-  position: fixed !important;
-  bottom: 10px !important;
-  right: 10px !important;
-  top: auto !important;
-  margin-top: 0 !important;
-  z-index: 1000;
+  flex-shrink: 0;
+  margin-right: 2rem;
 }
 
 /* Moving Background */
+.moving-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(270deg, #ffe742, #ff87d7, #63ddd9);
+  background-size: 600% 600%;
+  z-index: -1;
+  animation: gradientShift 30s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Sticky Header */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+/* Hero Text Animation */
+.hero-tagline {
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 3rem;
+  min-height: 60vh;
+}
+
+.hero-first-line,
+.hero-tagline {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #000;
+  display: block;
+  margin: 0.5rem 0;
+}
+
+.hero-box {
+  font-size: 6rem;
+  font-weight: 900;
+  color: #000;
+}
+
 .moving-background {
   position: fixed;
   top: 0;
@@ -143,9 +169,7 @@
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
-
-/* Hero Text Animation */
-.hero {
+ .hero {
   display: flex;
   flex-direction: column;
   align-items: center;

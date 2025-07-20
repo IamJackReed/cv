@@ -77,3 +77,52 @@
   position: relative;
   z-index: 1;
 }
+
+/* Layout Fixes */
+header {
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.home-link {
+  flex: 1;
+  margin: 0.75rem 0;
+  text-align: left;
+}
+
+.main-nav.offset-right {
+  flex-shrink: 0;
+  margin-right: 2rem;
+}
+
+/* Moving Background */
+.moving-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(270deg, #ffe742, #ff87d7, #63ddd9);
+  background-size: 600% 600%;
+  z-index: -1;
+  animation: gradientShift 30s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Sticky Header */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+/* Hero Text Animation */
+.hero-tagline {
+  transition: all 0.3s ease;
+  display: inline-block;
+}

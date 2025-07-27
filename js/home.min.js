@@ -1,4 +1,3 @@
-
 const explodingNav = document.querySelector(".exploding-nav"),
   explodingNavButton = document.querySelector(".exploding-nav-button");
 
@@ -165,12 +164,26 @@ thumbs.addEventListener("click", updateImage);
 thumbs.addEventListener("keydown", (e) => {
   if (e.key === "Enter") updateImage(e);
 });
-
-const sound = new Howl({
-  src: ["audio/bb8.mp3"],
+ const sound = new Howl({
+   src: ["audio/bb8.mp3"],
+   sprite: {
+     boop: [0, 3000], // Adjust duration as needed
+   },
+  });
+  ],
   sprite: {
-    boop: [0, 3000]
-  }
+    airhorn: [0, 2076],
+    beep: [2205, 378],
+    boop: [2724, 483],
+    click: [3373, 273],
+    hooray: [3762, 900],
+    oop: [4800, 324],
+    pop: [5319, 324],
+    "power-down": [5838, 952],
+    "power-up": [7005, 953],
+    woohoo: [8173, 743],
+    yay: [9081, 1265],
+  },
 });
 
 window.sound = sound;

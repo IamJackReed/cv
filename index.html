@@ -109,17 +109,104 @@
 <main class="home">
   <section class="block hero-block">
   <canvas class="boop-drop"></canvas>
-      
-   <h1 class="hero">
-     <span class="hero-first-line">Jack</span>
-     <span class="hero-box">Reed</span>
-     <span class="hero-tagline">Scrum Master</span>
-     </h1>
 
-       <button class="hero-cycle">
-     <span class="sr-only">change tagline</span>
-    </button>
-   </section>
+  <h1 class="hero">
+    <span class="hero-first-line">Jack</span>
+    <span class="hero-box">Reed</span>
+    <span class="hero-tagline">Scrum Master</span>
+  </h1>
+
+  <button class="hero-cycle">
+    <span class="sr-only">change tagline</span>
+  </button>
+</section>
+
+  <section id="bio" class="block bio-block">
+  <div class="bio-container">
+    <div>
+      <form class="bio-length-control" id="biolength">
+        <fieldset class="bio-fieldset">
+          <legend class="bio-legend">Adjust bio length:</legend>
+          <div class="bio-length-options">
+
+
+            <div class="bio-option">
+              <input class="bio-input" type="radio" id="length-shortest" name="biolength" value="shortest" data-sound-hover="pop" data-sound-focus="click" data-sound-click="click">
+              <label for="length-shortest" class="bio-label">
+                <span class="bio-label-text">tell me less</span>
+              </label>
+            </div>
+
+            <div class="bio-option">
+              <input class="bio-input" type="radio" id="length-shorter" name="biolength" value="shorter" data-sound-hover="pop" data-sound-focus="click" data-sound-click="click">
+              <label for="length-shorter" class="bio-label">
+                <span class="bio-label-text">shorter</span>
+              </label>
+            </div>
+
+            <div class="bio-option">
+              <input class="bio-input" type="radio" id="length-short" name="biolength" value="short" data-sound-hover="pop" data-sound-focus="click" data-sound-click="click" checked="">
+              <label for="length-short" class="bio-label">
+                <span class="bio-label-text">short</span>
+              </label>
+            </div>
+
+            <div class="bio-option">
+              <input class="bio-input" type="radio" id="length-long" name="biolength" value="long" data-sound-hover="pop" data-sound-focus="click" data-sound-click="click">
+              <label for="length-long" class="bio-label">
+                <span class="bio-label-text">long</span>
+              </label>
+            </div>
+
+            <div class="bio-option">
+              <input class="bio-input" type="radio" id="length-longer" name="biolength" value="longer" data-sound-hover="pop" data-sound-focus="click" data-sound-click="click">
+              <label for="length-longer" class="bio-label">
+                <span class="bio-label-text">longer</span>
+              </label>
+            </div>
+
+            <div class="bio-option">
+              <input class="bio-input" type="radio" id="length-longest" name="biolength" value="longest" data-sound-hover="pop" data-sound-focus="click" data-sound-click="click">
+              <label for="length-longest" class="bio-label">
+                <span class="bio-label-text">longest</span>
+              </label>
+            </div>
+
+          </div>
+        </fieldset>
+      </form>
+
+    <template id="bios">
+      <p data-length="less is more">
+        <strong>Jason Lengstorf</strong> is trying his very best.
+      </p>
+      <p data-length="shorter">
+        <strong>Jack Reed</strong> is a Scrum Master living in London.
+        He's trying his very best.
+      </p>
+      <p data-length="short">
+
+
+        <strong>Jack Reed</strong> is a Scrum Master living in London and works at Legal & General.
+        He's trying his very best.
+
+      </p>
+      <p data-length="long">
+        <strong>Jason Lengstorf</strong> is the host of <a href="https://lwj.dev/"><em>Learn With Jason</em></a> and the undefeated smashburger champ. He helps tech companies connect with developer communities through better devrel strategy and media. Jason advocates for continued learning through collaboration and play. He’s trying his very best to follow <a href="https://jason.energy/posts">his own advice</a>. He lives in Portland, Oregon.
+      </p>
+      <p data-length="longer">
+        <strong>Jason Lengstorf</strong> is the host of <a href="https://lwj.dev/"><em>Learn With Jason</em></a> and the undefeated smashburger champ. A creative technologist and educator, Jason helps tech companies connect with developer communities through better devrel strategy and media. He advocates for continued learning through collaboration and play, and models this on weekly livestreams where he pair programs with experts from around the community to learn something new in 90 minutes. He’s trying his very best to follow <a href="https://jason.energy/posts">his own advice</a>. He lives in Portland, Oregon.
+      </p>
+      <p data-length="longest">
+        <strong>Jason Lengstorf</strong> is the host of <a href="https://lwj.dev/"><em>Learn With Jason</em></a>, a web generalist, and the undefeated smashburger champ. A creative technologist and educator, Jason helps tech companies connect with developer communities through better devrel strategy and creative media production. He advocates for continued learning through collaboration and play as the fastest path to growth, and models this on weekly livestreams where he pair programs with experts from around the community to learn something new in 90 minutes. He’s trying his very best to follow <a href="https://jason.energy/posts">his own advice</a>. When this whole internet thing goes out of style, he'll probably open a food truck in his home city of Portland, Oregon.
+      </p>
+    </template>
+
+      <p class="bio">
+
+        <strong>Jason Lengstorf</strong> is the host of <a href="https://lwj.dev/"><em>Learn With Jason</em></a>, where he helps tech companies connect with developer communities through better devrel strategy and media. He's trying his very best to follow <a href="https://jason.energy/posts">his own advice</a>. He lives in Portland, Oregon.
+
+      </p>
 
       <div class="bio-social">
         <h2 class="bio-connect">Connect With Jason:</h2>
